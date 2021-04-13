@@ -1,0 +1,2 @@
+set DT_DEFAULT_JAVA_VERSION=latest
+set DT_DEFAULT_MVN_VERSION=latest
