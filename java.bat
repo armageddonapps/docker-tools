@@ -8,4 +8,6 @@ if defined DT_JAVA_VERSION (
     set DT_JAVA_VERSION=%DT_DEFAULT_JAVA_VERSION%
 )
 
-docker run -it --rm -v %cd%:/usr/workdir -w /usr/workdir openjdk:%DT_JAVA_VERSION% java %*
+call _set_env.bat
+
+docker run -it --rm %DT_ENV% %DT_ENV_EXT% -v %cd%:/usr/workdir -w /usr/workdir openjdk:%DT_JAVA_VERSION% java %*
